@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>cn.veryjava</groupId>
+  <artifactId>business</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0</version>
+
+  <name>business</name>
+  <description>business</description>
+
+  <organization>
+    <name>veryjava</name>
+    <url>http://blog.veryjava.cn</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <name>sunshineasbefore</name>
+      <email>work_wjj@163.com</email>
+    </developer>
+  </developers>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <java.version>1.8</java.version>
+    <spring-boot.version>1.4.2.RELEASE</spring-boot.version>
+    <spring-boot-dubbo.version>1.4.2.RELEASE</spring-boot-dubbo.version>
+  </properties>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.4.2.RELEASE</version>
+    <relativePath/>
+  </parent>
+
+  <modules>
+    <module>service</module>
+    <module>provider</module>
+    <module>consumer</module>
+  </modules>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <version>${spring-boot.version}</version>
+      <optional>true</optional>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-dubbo</artifactId>
+      <version>${spring-boot-dubbo.version}</version>
+      <optional>true</optional>
+    </dependency>
+  </dependencies>
+</project>
